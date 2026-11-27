@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2eeee;
+    color: #111;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 30px;
+    padding: 20px;
+    min-height: 100vh;
+}
+.caja-instrucciones {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.caja-instrucciones h3 {
+    color: #d62828;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.caja-instrucciones h4 {
+    margin-bottom: 10px;
+}
+
+.caja-instrucciones p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.caja-instrucciones ol {
+    margin-left: 25px;
+}
+
+.caja-instrucciones li {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.credenciales {
+    background: #fff6d7;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.aplicacion {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 40px);
+}
+.encabezado {
+    background: #d62828;
+    color: white;
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.marca strong {
+    font-size: 18px;
+}
+
+.marca small {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.acciones-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 11px;
+}
+
+#cerrarSesion {
+    background: white;
+    color: #d62828;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Navegación */
+.navegacion {
+    padding: 15px 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.navegacion button {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.navegacion button:hover,
+.navegacion button.activo {
+    background: #f4c430;
+}
+
+/* Login */
+.contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pantalla-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-height: 650px;
+    padding: 40px 20px;
+}
+
+.login {
+    width: 100%;
+    max-width: 355px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 27px;
+}
+
+.etiqueta {
+    color: #d62828;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.login h1 {
+    font-size: 25px;
+    margin-bottom: 13px;
+}
+
+.login h5 {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.login p {
+    color: #555;
+    font-size: 11px;
+    margin-bottom: 22px;
+}
+
+.login label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 35px;
+    padding: 0 10px;
+    margin-bottom: 17px;
+}
+
+.campo span {
+    color: #777;
+    margin-right: 10px;
+}
+
+.campo input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 11px;
+}
+
+.campo:focus-within {
+    border-color: #d62828;
+}
+
+#contadorIntentos {
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+#mensajeError {
+    color: #d62828;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#mensajeError:empty {
+    display: none;
+}
+
+#btnIngresar {
+    width: 100%;
+    background: #d62828;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 11px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#btnIngresar:hover {
+    background: #b81e1e;
+}
+
+#btnIngresar:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.login .ayuda {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 10px;
+}
+
+.dashboard {
+    padding: 45px;
+    flex: 1;
+}
+
+.bienvenida {
+    margin-bottom: 30px;
+}
+
+.bienvenida h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.bienvenida p {
+    color: #666;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.tarjeta:hover {
+    border-color: #d62828;
+    background: #fff8f8;
+}
+
+.tarjeta h3 {
+    color: #d62828;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #666;
+    font-size: 13px;
+}
+
+.contenido-vista {
+    margin-top: 30px;
+}
+
+.contenido-vista h2 {
+    margin-bottom: 12px;
+}
+.pie-pagina {
+    background: #d62828;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.pie-pagina p {
+    margin-top: 6px;
+}
+
+.menu-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-footer button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.fondo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.modal {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal h2 {
+    color: #d62828;
+    margin-bottom: 15px;
+}
+
+.modal p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.modal button {
+    background: #d62828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    cursor: pointer;
+}
+
+.contenedor.logueado {
+    display: block;
+}
+
+.contenedor.logueado .instrucciones {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    .contenedor {
+        display: block;
+        padding: 10px;
+    }
+
+    .instrucciones {
+        margin-bottom: 15px;
+    }
+
+    .dashboard {
+        padding: 25px 15px;
+    }
+
+    .marca small {
+        display: none;
+    }
+
+    .pie-pagina {
+        flex-direction: column;
+        text-align: center;
+    }
+}
