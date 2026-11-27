@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supergato - Iniciar sesión</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/auth.js" defer></script>
+</head>
+<body>
+
+<div class="contenedor" id="contenedor">
+
+    <!-- Panel de instrucciones -->
+    <aside class="instrucciones">
+        <div class="caja-instrucciones">
+            <h3>▷ PUNTO DE INICIO</h3>
+            <h4>Login normal</h4>
+            <p>Flujo: Login → Inicio</p>
+
+            <h3>QUÉ PROBAR</h3>
+            <ol>
+                <li>Ingresa con las credenciales de usuario o administrador.</li>
+                <li>Presiona Iniciar sesión.</li>
+                <li>Entrarás al dashboard correspondiente.</li>
+            </ol>
+
+            <div class="credenciales">
+                maria / usuario123 (Usuario)<br>
+                admin / admin123 (Administrador)
+            </div>
+        </div>
+    </aside>
+
+    <div class="aplicacion">
+
+        <!-- Encabezado -->
+        <header class="encabezado">
+            <div class="marca">
+                <span class="logo">🐱</span>
+                <strong>SUPERGATO</strong>
+                <small>Gestión de pedidos</small>
+            </div>
+
+            <div class="acciones-header">
+                <span id="tipoPerfil">Uso interno</span>
+                <button id="cerrarSesion" hidden>
+                    Cerrar sesión
+                </button>
+            </div>
+        </header>
+
+        <!-- Menú -->
+        <nav id="menuNavegacion"
+             class="navegacion" hidden>
+        </nav>
+
+        <main class="contenido">
+
+            <!-- Pantalla login -->
+            <section id="pantallaLogin"
+                     class="pantalla-login">
+
+                <div class="login">
+
+                    <div class="etiqueta">
+                        ACCESO INTERNO
+                    </div>
+
+                    <h1>Iniciar sesión</h1>
+
+                    <h5>Bienvenido a SUPERGATO</h5>
+
+                    <p>
+                        Usa las credenciales asignadas
+                        a tu perfil.
+                    </p>
+
+                    <form id="formLogin">
+
+                        <label for="usuario">
+                            Usuario
+                        </label>
+
+                        <div class="campo">
+                            <span>♙</span>
+                            <input
+                                type="text"
+                                id="usuario"
+                                placeholder="Ingresa tu usuario"
+                                required
+                            >
+                        </div>
+
+                        <label for="contrasena">
+                            Contraseña
+                        </label>
+
+                        <div class="campo">
+                            <span>♧</span>
+                            <input
+                                type="password"
+                                id="contrasena"
+                                placeholder="Ingresa tu contraseña"
+                                required
+                            >
+                        </div>
+
+                        <p id="contadorIntentos">
+                            0 de 3 intentos
+                        </p>
+
+                        <p id="mensajeError"
+                           class="mensaje-error">
+                        </p>
+
+                        <button type="submit"
+                                id="btnIngresar">
+                            Iniciar sesión
+                        </button>
+
+                    </form>
+
+                    <p class="ayuda">
+                        ¿Necesitas ayuda?
+                        Contacta al administrador.
+                    </p>
+
+                </div>
+            </section>
+
+            <!-- Dashboard -->
+            <section id="pantallaDashboard"
+                     class="dashboard" hidden>
+
+                <div class="bienvenida">
+                    <h1 id="saludo">Bienvenido</h1>
+                    <p id="descripcionPerfil"></p>
+                </div>
+
+                <div id="opcionesDashboard"
+                     class="tarjetas">
+                </div>
+
+                <section id="contenidoVista"
+                         class="contenido-vista">
+                </section>
+
+            </section>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="pie-pagina">
+            <div>
+                <strong>SUPERGATO</strong>
+                <p>Sistema de gestión de pedidos</p>
+            </div>
+
+            <div id="menuFooter"
+                 class="menu-footer">
+            </div>
+
+            <p>© 2026 Supergato</p>
+        </footer>
+
+    </div>
+</div>
+
+<!-- Ventana de bloqueo -->
+<div id="modalBloqueo"
+     class="fondo-modal" hidden>
+
+    <div class="modal"
+         role="alertdialog"
+         aria-modal="true"
+         aria-labelledby="tituloBloqueo">
+
+        <h2 id="tituloBloqueo">
+            Cuenta bloqueada
+        </h2>
+
+        <p>
+            Has realizado 3 intentos incorrectos.
+            Tu acceso ha sido bloqueado.
+            Contacta al administrador.
+        </p>
+
+        <button id="btnCerrarModal">
+            Entendido
+        </button>
+
+    </div>
+</div>
+
+</body>
+</html>
 
